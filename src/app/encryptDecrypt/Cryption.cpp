@@ -17,7 +17,6 @@ int executeCryption(const std::string &taskData) {
       task.fileStream.seekp(-1, std::ios ::cur);
       task.fileStream.put(ch);
     }
-
   } else {
     char ch;
     while (task.fileStream.get(ch)) {
