@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
                     << std::endl;
         }
       }
-      processManagement.executeTasks();
+      /*processManagement.executeTasks(); // Not needed as each task spawns its own process*/
     } else {
       std::cout << "Invalid directory path: " << directory << std::endl;
     }
