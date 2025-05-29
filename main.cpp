@@ -19,6 +19,8 @@ int main(int argc, char *argv[]) {
 
   std::cout << "Enter the action you want to perform ENCRYPT/DECRYPT: ";
   std::getline(std::cin, actionStr);
+
+  /*std::cout << "Starting the process...";*/
   auto start = std::chrono::high_resolution_clock::now();
   try {
     if (fs::exists(directory) && fs::is_directory(directory)) {
@@ -42,7 +44,7 @@ int main(int argc, char *argv[]) {
                     << std::endl;
         }
       }
-      processManagement.executeTasks();
+      /*processManagement.executeTasks();*/
     } else {
       std::cout << "Invalid directory path: " << directory << std::endl;
     }
@@ -54,3 +56,4 @@ int main(int argc, char *argv[]) {
   std::cout << "Time taken: " << duration.count() << " seconds" << std::endl;
   return 0;
 }
+
