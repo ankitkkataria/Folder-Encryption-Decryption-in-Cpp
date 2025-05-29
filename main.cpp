@@ -1,6 +1,7 @@
 #include "./src/app/processes/ProcessManagement.hpp"
 #include "./src/app/processes/Task.hpp"
 #include <algorithm>
+#include <chrono>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -18,7 +19,7 @@ int main(int argc, char *argv[]) {
 
   std::cout << "Enter the action you want to perform ENCRYPT/DECRYPT: ";
   std::getline(std::cin, actionStr);
-
+  auto start = std::chrono::high_resolution_clock::now();
   try {
     if (fs::exists(directory) && fs::is_directory(directory)) {
       ProcessManagement processManagement;
@@ -48,5 +49,8 @@ int main(int argc, char *argv[]) {
   } catch (const fs::filesystem_error &ex) {
     std::cout << "Filesystem error: " << ex.what() << std::endl;
   }
+  auto end = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+  std::cout << "Time taken: " << duration.count() << " seconds" << std::endl;
   return 0;
 }
