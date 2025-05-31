@@ -18,8 +18,7 @@ Create random text files for testing:
 python3 makeTestDir.py
 ```
 
-> **Note:** Test files are not included in the repository as they contain random generated content.
-
+> **Note:** Test files are not included in the repository as they contain randomly generated text.
 ### 2. Build the Project
 
 ```bash
