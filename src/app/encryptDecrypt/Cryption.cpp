@@ -30,7 +30,7 @@ int executeCryption(const std::string &taskData) {
   }
   task.fileStream.close();
   
-  std::time_t t = std::time(nullptr);
+  /*std::time_t t = std::time(nullptr);*/
   /*std::tm* now = std::localtime(&t);*/
   /*std::cout << "Completed encryption/decryption at: " << std::put_time(now, "%Y-%m-%d %H:%M:%S") << std::endl;*/
   

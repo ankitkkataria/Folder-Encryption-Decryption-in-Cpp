@@ -25,6 +25,8 @@ private:
   // Semaphores & Mutex for synchronization
   sem_t* itemsSemaphore;
   sem_t* emptySlotsSemaphore;
+  sem_t* queueAccessSemaphore;
+
   std::mutex queueLock;
 
 public:
